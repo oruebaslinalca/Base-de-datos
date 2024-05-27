@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Equipos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Registrar Nuevo Dispositivo</h1>
+    <form action="register.php" method="POST">
+        <div class="field-group">
+            <label for="tipo">Tipo de Dispositivo:</label>
+            <select id="tipo" name="tipo" required>
+                <option value="Portátil">Portátil</option>
+                <option value="Equipo de Mesa">Equipo de Mesa</option>
+                <option value="Impresora">Impresora</option>
+            </select>
+        </div>
+
+        <div class="field-group">
+            <label for="marca">Marca:</label>
+            <input type="text" id="marca" name="marca" required>
+        </div>
+        
+        <div class="field-group">
+            <label for="modelo">Modelo:</label>
+            <input type="text" id="modelo" name="modelo" required>
+        </div>
+
+        <div class="field-group">
+            <label for="numero_serie">Número de Serie:</label>
+            <input type="text" id="numero_serie" name="numero_serie" required>
+        </div>
+
+        <div class="field-group">
+            <label for="fecha_adquisicion">Fecha de Adquisición:</label>
+            <input type="date" id="fecha_adquisicion" name="fecha_adquisicion" required>
+        </div>
+
+        <div class="field-group">
+            <label for="precio">Precio:</label>
+            <input type="number" id="precio" name="precio" step="0.01" required>
+        </div>
+
+        <!-- Campos adicionales según el tipo de dispositivo -->
+        <div id="portatil_fields" class="field-group">
+            <label for="ram_portatil">RAM:</label>
+            <input type="text" id="ram_portatil" name="ram_portatil">
+
+            <label for="procesador_portatil">Procesador:</label>
+            <input type="text" id="procesador_portatil" name="procesador_portatil">
+
+            <label for="disco_duro_portatil">Disco Duro:</label>
+            <input type="text" id="disco_duro_portatil" name="disco_duro_portatil">
+        </div>
+
+        <div id="equipos_mesa_fields" class="field-group">
+            <label for="ram_mesa">RAM:</label>
+            <input type="text" id="ram_mesa" name="ram_mesa">
+
+            <label for="procesador_mesa">Procesador:</label>
+            <input type="text" id="procesador_mesa" name="procesador_mesa">
+
+            <label for="disco_duro_mesa">Disco Duro:</label>
+            <input type="text" id="disco_duro_mesa" name="disco_duro_mesa">
+
+            <label for="monitor">Monitor:</label>
+            <input type="text" id="monitor" name="monitor">
+
+            <label for="teclado">Teclado:</label>
+            <input type="text" id="teclado" name="teclado">
+
+            <label for="raton">Ratón:</label>
+            <input type="text" id="raton" name="raton">
+        </div>
+
+        <div id="impresoras_fields" class="field-group">
+            <label for="tipo_impresion">Tipo de Impresión:</label>
+            <input type="text" id="tipo_impresion" name="tipo_impresion">
+
+            <label for="velocidad_impresion">Velocidad de Impresión:</label>
+            <input type="text" id="velocidad_impresion" name="velocidad_impresion">
+
+            <label for="resolucion_impresion">Resolución de Impresión:</label>
+            <input type="text" id="resolucion_impresion" name="resolucion_impresion">
+
+            <label for="capacidad_papel">Capacidad de Papel:</label>
+            <input type="number" id="capacidad_papel" name="capacidad_papel">
+        </div>
+
+        <input type="submit" value="Registrar">
+    </form>
+
+    <script src="script.js"></script>
+</body>
+</html>
